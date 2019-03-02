@@ -4,9 +4,13 @@ ng new my-app
 cd my-app
 ng serve --open
 
+git push -u origin master
 
 how to clone
 https://code.visualstudio.com/docs/editor/versioncontrol
 
 add bootstrap
 https://stackoverflow.com/questions/37649164/how-to-add-bootstrap-to-an-angular-cli-project
+
+add awesome
+https://stackoverflow.com/questions/38796541/how-to-add-font-awesome-to-angular-2-cli-project
