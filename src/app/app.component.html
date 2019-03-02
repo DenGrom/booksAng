@@ -1,21 +1,241 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<body style="">
+
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WRF5Q2"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WRF5Q2');</script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript">
+        if (screen.width <= 800) {
+            var ref = window.location.pathname;
+            console.log(ref);
+            if (ref.indexOf('detail-product') > -1) {
+                ref = ref.replace('product/detail-product', 'mobile/index#detaile');
+                console.log(ref);
+                window.location = ref;
+            }
+            else window.location = "mobile/index";
+        }
+    </script>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-envelope"></i> sale@books.ua</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i> +38 (057) 714 04 70</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-pills">
+
+                                <li>     							</li>
+                                <li>
+                                    <span>
+                                        <i class="fa fa-shopping-cart"></i>&nbsp; <a href="/cart/index?returnUrl=%2F">РљРѕСЂР·РёРЅР°</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <div id="cart">
+                                        0 С‚РѕРІР°СЂ(РѕРІ),
+                                        0 РіСЂРЅ.
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-lock"></i>&nbsp;<a href="/Account/LogOn">Р’С…РѕРґ</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="logo pull-left">
+                            <!-- <a href="/"><img src="/Content/themes/base/images/Logo1.jpg" alt="Р›РѕРіРѕС‚РёРї"></a> -->
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div id="search" class="search_box">
+                            <form action="/Product/Search" class="header__search" method="post">
+                                <input id="searchData" name="searchData" placeholder="РџРѕРёСЃРє РїРѕ РЅР°Р·РІР°РЅРёСЋ, Р°РІС‚РѕСЂСѓ, ISBN, РёР·РґР°С‚РµР»СЊСЃС‚РІСѓ СЃСЂРµРґРё 25000 РєРЅРёРі" type="text" value=""><input type="submit" class="search-submit" value="">
+                            </form>							<div id="autoSearch"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a class="active" href="/">Р“Р»Р°РІРЅР°СЏ</a></li>
+                                <li><a href="/home/about">Рћ РЅР°СЃ</a></li>
+                                <li><a href="/home/delivery">Р”РѕСЃС‚Р°РІРєР° Рё РѕРїР»Р°С‚Р°</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+
+    <section id="slider">
+        <!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="sidebar-left col-xs-12 col-md-2" id="left_menu">
+
+                    <div class="sidebar-group">
+                        <div class="cat">РљРђРўРђР›РћР“</div>
+                        <!--category-productsr-->
+                        <div class="panel-group category-products" id="accordian">
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <p class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#medicina" class="" aria-expanded="true">
+                                            <span class="badge pull-right">
+                                                <i class="fa fa-caret-down"></i>
+                                            </span>
+                                        </a><a href="/product/list-books-group/medicina/root">РњРµРґРёС†РёРЅР°</a>
+
+                                    </p>
+                                </div>
+                                <div id="medicina" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                    <div class="panel-body">
+
+
+                                        <ul style="padding-left:10px;font-size:13px;margin-top:5px;">
+                                            <li>
+                                                <a href="/product/list-books-group/medicina/medicina-specialjnaya">РњРµРґРёС†РёРЅР° СЃРїРµС†РёР°Р»СЊРЅР°СЏ</a>
+                                            </li>
+                                            <li>
+                                                <a href="/product/list-books-group/medicina/populyarnaya-i-netradicionnaya-medicina">РџРѕРїСѓР»СЏСЂРЅР°СЏ Рё РЅРµС‚СЂР°РґРёС†РёРѕРЅРЅР°СЏ РјРµРґРёС†РёРЅР°</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <p class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#iskusstvo" class="collapsed" aria-expanded="false">
+                                            <span class="badge pull-right">
+                                                <i class="fa fa-caret-down"></i>
+                                            </span>
+                                        </a><a href="/product/list-books-group/iskusstvo/root">РСЃРєСѓСЃСЃС‚РІРѕ</a>
+
+                                    </p>
+                                </div>
+                                <div id="iskusstvo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+
+
+                                        <ul style="padding-left:10px;font-size:13px;margin-top:5px;">
+                                            <li>
+                                                <a href="/product/list-books-group/iskusstvo/aljbomi">РђР»СЊР±РѕРјС‹</a>
+                                            </li>
+                                            <li>
+                                                <a href="/product/list-books-group/iskusstvo/teoriya-iskusstva">РўРµРѕСЂРёСЏ РёСЃРєСѓСЃСЃС‚РІР°</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <p class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#ezotericheskaya-literatura" class="collapsed" aria-expanded="false">
+                                            <span class="badge pull-right">
+                                                <i class="fa fa-caret-down"></i>
+                                            </span>
+                                        </a><a href="/product/list-books-group/ezotericheskaya-literatura/root">Р­Р·РѕС‚РµСЂРёС‡РµСЃРєР°СЏ Р»РёС‚РµСЂР°С‚СѓСЂР°</a>
+
+                                    </p>
+                                </div>
+                                <div id="ezotericheskaya-literatura" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+
+
+                                        <ul style="padding-left:10px;font-size:13px;margin-top:5px;"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VK Widget -->
+
+                </div>
+                <div class="col-md-8 col-sm-10 col-xs-12" id="render_body">
+
+
+                    <div class="col-sm-12">
+                        <!--features_items-->
+                        <!--/category-tab-->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!--/slider-->
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-top">
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">В© 2014-2017 BOOKS Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>&nbsp;
+                    <!-- Yandex.Metrika informer -->
+                    <!-- /Yandex.Metrika informer -->
+                </div>
+            </div>
+        </div>
+
+    </footer><!--/Footer-->
+
+</body>
+<!--</html>-->
