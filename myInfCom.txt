@@ -1,3 +1,4 @@
+https://api.nytimes.com/svc/books/v3/lists.string
 
 npm install -g @angular/cli
 ng new my-app
@@ -7,6 +8,11 @@ ng serve --open
 ng generate component navMain
 or simple
 ng g c navMain
+generate serves
+ng g s data
+generate class
+ng generate cl [name]
+
 
 git push -u origin master
 
@@ -24,6 +30,16 @@ format
 comment / uncomment
 Ctrl + k when c
  Shift + Alt + F
+
+
+base templete site
+http://books.ua/product/list-books-group/literatura-dlya-detej-i-yunoshestva/root
+
+base tutorial
+https://www.youtube.com/watch?v=5wtnKulcquA&feature=youtu.be
+
+
+
 
 
 
