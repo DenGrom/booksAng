@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { PaymentComponent } from './payment/payment.component';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SectionComponent } from './section/section.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { HeaderComponent } from './header/header.component';
     AboutComponent,
     PaymentComponent,
     MainComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    SectionComponent
   ],
   imports: [
     BrowserModule,
