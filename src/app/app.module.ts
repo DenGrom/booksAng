@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertModule } from 'ngx-bootstrap';
@@ -12,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SectionComponent } from './section/section.component';
 import { ComputerRootComponent } from './computer-root/computer-root.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -24,13 +26,17 @@ import { ComputerRootComponent } from './computer-root/computer-root.component';
     HeaderComponent,
     FooterComponent,
     SectionComponent,
-    ComputerRootComponent
+    ComputerRootComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AlertModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+    // ,
+    // ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../data.service';
+import { Book } from '../book';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,11 @@ import {DataService} from '../data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  books:Array<Book>;
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    var contentData = this.data.getHomeContentData();
+    this.books = this.data.getHomeContentData();
   }
 
 }

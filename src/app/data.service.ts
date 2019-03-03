@@ -11,7 +11,7 @@ export class DataService {
 
   getHomeContentData()
   {
-    return {dataNew: "123454"}
+    return this.getComputerBooksData();
   }
   getComputerRootContentData()
   {
