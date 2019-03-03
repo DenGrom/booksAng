@@ -4,6 +4,8 @@ ng new my-app
 cd my-app
 ng serve --open
 
+ng generate component navMain
+
 git push -u origin master
 
 how to clone
