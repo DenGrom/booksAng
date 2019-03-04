@@ -20,6 +20,9 @@ Get build for the prodject. It adds dist folder in prodject
 ng build
 After make build for prodaction. It will be a smaller
 ng build --prod
+start the app
+npm install -g http-server
+http-server -o
 
 how to clone
 https://code.visualstudio.com/docs/editor/versioncontrol
