@@ -16,6 +16,11 @@ ng generate cl [name]
 
 git push -u origin master
 
+Get build for the prodject. It adds dist folder in prodject
+ng build
+After make build for prodaction. It will be a smaller
+ng build --prod
+
 how to clone
 https://code.visualstudio.com/docs/editor/versioncontrol
 

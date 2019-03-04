@@ -1,3 +1,101 @@
-<p>
-  contact works!
-</p>
+<p class="title text-center">Контакты</p>
+
+
+<div class="col-md-4">
+  <p>Книжный интернет-магазин <strong>"Books"</strong></p>
+  <p>61022, г. Харьков, ул. Сумская, 51</p>
+  <br>
+  <p><strong>Часы работы:</strong></p>
+  <p>с 10:00 до 20:00 (пн-вс)
+  </p>
+  <br>
+
+  <p><strong>Электронная почта:</strong> sale@books.ua</p>
+
+</div>
+
+<div class="col-md-8">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.2088812632796!2d36.23720700000003!3d50.0074400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0def190d31b%3A0x564ec62d4275cf5e!2z0KHRg9C80YHRjNC60LAg0LLRg9C7LiwgNTEsINCl0LDRgNC60ZbQsiwg0KXQsNGA0LrRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1415381305996"
+    width="500" height="300" frameborder="0" style="border:0"></iframe>
+</div>
+<div class="col-md-12">
+  <br>
+
+
+
+
+
+
+
+
+
+  <div class="col-sm-1">
+
+  </div>
+
+  <div class="col-md-10">
+    <div class="col-md-12">
+      <h1 class="title text-center"></h1>
+
+      <br>
+
+      <form [formGroup]="messageForm" class="form-horizontal" (ngSubmit)="onSubmit()" >
+        <div class="fontcolour">
+          <fieldset>
+            <legend></legend>
+
+            <div class="editor-label">
+              <label for="">Имя</label>
+            </div>
+            <div class="editor-field">
+              <input class="form-control" formControlName="name" type="text" value="">
+              <span class="error-input" *ngIf="submitted && messageForm.controls.name.errors" >
+                <span class="error-input" *ngIf="messageForm.controls.name.errors.required" > Your name is required</span>
+              </span>
+            </div>
+            <br>
+            <div class="editor-label">
+              <label for="">Телефон</label>
+            </div>
+            <div class="editor-field">
+              <input class="form-control" id="phone"  type="text" value="">
+            </div>
+            <br>
+            <div class="editor-label">
+              <label for="">Почта</label>
+            </div>
+            <div class="editor-field">
+              <input class="form-control" id="mail"  type="text" value="">
+              <span class="field-validation-valid" ></span>
+
+            </div>
+            <br>
+            <div class="editor-label">
+              <label for="">Сообщение</label>
+            </div>
+
+            <div class="editor-label">
+              <textarea class="form-control" cols="20" id="message" formControlName="message" rows="5"></textarea>
+              <span class="error-input" *ngIf="submitted && messageForm.controls.message.errors" >
+                <span class="error-input" *ngIf="messageForm.controls.message.errors.required" > Your name is required</span>
+              </span>
+            </div>
+
+            <br>
+            <p>
+              <input class="btn btn-default" type="submit" value="Send">
+
+            </p>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-1">
+
+  </div>
+
+
+
+</div>
