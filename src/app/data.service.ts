@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Book } from './book';
 
 @Injectable({
@@ -7,21 +7,18 @@ import { Book } from './book';
 })
 export class DataService {
 
-   constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getHomeContentData()
-  {
+  getHomeContentData() {
     return this.getComputerBooksData();
   }
-  getComputerRootContentData()
-  {
+  getComputerRootContentData() {
     return this.getComputerBooksData();
     // return this.http.get('https://reqres.in/api/users');
-    
+
   }
-  getComputerBooksData()
-  {
-    let books:Array<Book> = [];
+  getComputerBooksData() {
+    let books: Array<Book> = [];
     let bookJS = new Book();
     bookJS.id = 1;
     bookJS.author = 'Flagan David';
@@ -45,6 +42,9 @@ export class DataService {
     bookCsh.price = 291.00;
     bookCsh.urlPic = 'http://books.ua/Product/GetBigImage?code_wares=260472';
     books.push(bookCsh);
+    console.log(books);
+
+
 
     return books;
   }
