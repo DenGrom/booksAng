@@ -12,7 +12,8 @@ generate serves
 ng g s data
 generate class
 ng generate cl [name]
-
+generete auth guard
+ng generate guard <name> [options]
 
 git push -u origin master
 
@@ -26,6 +27,7 @@ http-server -o
 
 how to clone
 https://code.visualstudio.com/docs/editor/versioncontrol
+https://blog.velingeorgiev.com/how-to-clone-git-project-with-visual-studio-code
 
 add bootstrap
 https://stackoverflow.com/questions/37649164/how-to-add-bootstrap-to-an-angular-cli-project
@@ -43,13 +45,13 @@ Ctrl + k when c
 base templete site
 http://books.ua/product/list-books-group/literatura-dlya-detej-i-yunoshestva/root
 
-base tutorial
+base tutorial angular
 https://www.youtube.com/watch?v=5wtnKulcquA&feature=youtu.be
 
+tutorial Core2 jwt auth
+http://jasonwatmore.com/post/2018/08/14/aspnet-core-21-jwt-authentication-tutorial-with-example-api
 
-
-
-
+dotnet run 
 
 
 

@@ -5,9 +5,24 @@ import { AboutComponent } from './about/about.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ComputerRootComponent } from './computer-root/computer-root.component';
 import { ContactComponent } from './contact/contact.component';
+import { AuthGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' },
+
   { path: 'about', component: AboutComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'computer', component: ComputerRootComponent },

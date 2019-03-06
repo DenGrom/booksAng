@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../data.service';
 import { Book } from '../book';
+import { User } from '../user';
+import { UserService } from '../user.service';
+import { AuthenticationService } from '../authentication.service';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +13,16 @@ import { Book } from '../book';
 })
 export class HomeComponent implements OnInit {
   books:Array<Book>;
-  constructor(private data: DataService) { }
+  users: User[] = [];
+  constructor(
+    private data: DataService,
+    private userService: UserService) { }
 
   ngOnInit() {
     this.books = this.data.getHomeContentData();
+    this.userService.getAll().pipe(first()).subscribe(users => {
+      this.users = users;
+  });
   }
 
 }

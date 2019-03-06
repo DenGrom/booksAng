@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,14 @@ import { SectionComponent } from './section/section.component';
 import { ComputerRootComponent } from './computer-root/computer-root.component';
 import { ContactComponent } from './contact/contact.component';
 
+// import { routing } from './app.routing';
+
+// used to create fake backend
+import { fakeBackendProvider } from 'src/app/helpers/fake-backend';
+import { JwtInterceptor } from 'src/app/helpers/jwt.interceptor';
+import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +35,8 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     SectionComponent,
     ComputerRootComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +47,13 @@ import { ContactComponent } from './contact/contact.component';
     // ,
     // ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
