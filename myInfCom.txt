@@ -51,7 +51,21 @@ https://www.youtube.com/watch?v=5wtnKulcquA&feature=youtu.be
 tutorial Core2 jwt auth
 http://jasonwatmore.com/post/2018/08/14/aspnet-core-21-jwt-authentication-tutorial-with-example-api
 
+tutorial Angular 7 - JWT Authentication
+http://jasonwatmore.com/post/2018/11/16/angular-7-jwt-authentication-example-tutorial
+
 dotnet run 
+
+builder: angular.json
+A file named angular.json at the root level of an Angular workspace provides workspace-wide and project-specific configuration defaults for build and development tools provided by the Angular CLI.
+angular.json has "index": 
+"src/index.html",
+            "main": "src/main.ts",
+
+
+
+
+
 
 
 

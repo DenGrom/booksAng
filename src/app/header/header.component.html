@@ -29,8 +29,8 @@
 
                               </div>
                           </li>
-                          <li>
-                              <span><i class="fa fa-lock"></i>&nbsp;<a href="/Account/LogOn">Login</a></span>
+                          <li *ngIf="currentUser">
+                              <span><i class="fa fa-lock"></i>&nbsp;<a (click)="logout()">Logout</a></span>
                           </li>
                       </ul>
                   </div>
