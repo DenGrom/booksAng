@@ -22,6 +22,8 @@ import { fakeBackendProvider } from 'src/app/helpers/fake-backend';
 import { JwtInterceptor } from 'src/app/helpers/jwt.interceptor';
 import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
 import { LoginComponent } from './login/login.component';
+import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { LoginLayoutComponent } from './login-layout/login-layout.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { LoginComponent } from './login/login.component';
     SectionComponent,
     ComputerRootComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
     BrowserModule,
