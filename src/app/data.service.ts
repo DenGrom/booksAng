@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Book } from './book';
+import { User } from './user';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,9 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getHomeContentData() {
+    debugger;
+    // return this.http.get('https://localhost:5001/api/values');
+    var test = this.http.get('http://localhost:5000/api/values');
     return this.getComputerBooksData();
   }
   getComputerRootContentData() {

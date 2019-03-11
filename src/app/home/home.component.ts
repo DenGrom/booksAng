@@ -5,6 +5,7 @@ import { User } from '../user';
 import { UserService } from '../user.service';
 import { AuthenticationService } from '../authentication.service';
 import { first } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,9 @@ export class HomeComponent implements OnInit {
     private userService: UserService) { }
 
   ngOnInit() {
+
     this.books = this.data.getHomeContentData();
+
     this.userService.getAll().pipe(first()).subscribe(users => {
       this.users = users;
   });
